@@ -6,7 +6,7 @@ import java.util.LinkedList;
 public class BinaryTree2 {
 	
 	//插入结点
-	public static void insertNode(Tree tree, int i) {
+	static void insertNode(Tree tree, int i) {
 		if (tree == null) {
 			return;
 		}
@@ -34,7 +34,7 @@ public class BinaryTree2 {
 	}
 
 	//创建树
-	public static Tree createTree(int[] is) {
+	static Tree createTree(int[] is) {
 		Tree tree = new Tree();
 		tree.size = 0;
 		for (int i = 0; i < is.length; i++) {
@@ -44,7 +44,7 @@ public class BinaryTree2 {
 	}
 
 	//层序遍历
-	public static void printTreeLevelOrder(Tree tree) {
+	static void printTreeLevelOrder(Tree tree) {
 		if (tree == null || tree.root == null) {
 			return;
 		}
@@ -72,7 +72,7 @@ public class BinaryTree2 {
 	}
 
 	//打印第n层树
-	public static void printTreeKLevel(Tree tree, int n) {
+	static void printTreeKLevel(Tree tree, int n) {
 		if (tree == null || tree.root == null) {
 			return;
 		}
@@ -104,7 +104,7 @@ public class BinaryTree2 {
 	}
 
 	//打印叶子节点
-	public static int getLeafNumber(Node node) {
+	static int getLeafNumber(Node node) {
 		if (node == null) {
 			return 0;
 		}
@@ -116,7 +116,7 @@ public class BinaryTree2 {
 	}
 
 	//打印树的高度
-	public static int getTreeHeight(Node node) {
+	static int getTreeHeight(Node node) {
 		if (node == null) {
 			return 0;
 		}
