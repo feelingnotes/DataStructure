@@ -1,4 +1,4 @@
-package Sort;
+package sort;
 
 public class sort {
 	
@@ -194,10 +194,10 @@ public class sort {
 			int r = end;
 			int temp;
 			while (l <= r) {
-				while (p[l] < key && l <= r) {
+				while (l <= r && p[l] < key) {
 					l++;
 				}
-				while (p[r] > key && l <= r) {
+				while (l <= r && p[r] > key) {
 					r--;
 				}
 				if (l <= r) {
