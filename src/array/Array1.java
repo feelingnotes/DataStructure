@@ -47,8 +47,9 @@ public class Array1 {
 
 		if (p[start] > p[end]) {
 			return p[end];
+		}else{
+			return p[start];
 		}
-		return -1;
 	}
 
 	//奇数在前偶数在后

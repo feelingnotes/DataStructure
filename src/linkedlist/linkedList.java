@@ -117,6 +117,9 @@ public class linkedList {
 		if (dNode.next != null) {
 			dNode.value = dNode.next.value;
 			dNode.next = dNode.next.next;
+		} else if (header == dNode) {
+			header = null;
+			return;
 		} else {
 			Node head = header;
 			while (head.next != null && head.next.next != null) {
