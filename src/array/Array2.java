@@ -1,8 +1,8 @@
 package array;
 
 public class Array2 {
-	
-	//调整堆
+
+	// 调整堆
 	public static void adjustHeap(int p[], int x, int k) {
 		if (p == null || k > p.length) {
 			return;
@@ -12,17 +12,19 @@ public class Array2 {
 			if (i + 1 < k && p[i] < p[i + 1]) {
 				i++;
 			}
-			if (p[x] < p[i]) {
-				p[x] = p[i];
-				x = i;
+			if (p[k] > temp) {
+				p[i] = p[k];
+				i = k;
+			} else {
+				break;
 			}
 		}
 		p[x] = temp;
 	}
 
-	//最小的第k个数
+	// 最小的k个数
 	public static void minKthNum(int p[], int k) {
-		if (p == null || k > p.length) {
+		if (p == null || k > p.length || k <= 0) {
 			return;
 		}
 		int n[] = new int[k];
@@ -40,7 +42,7 @@ public class Array2 {
 		}
 	}
 
-	//连续子数组最大和
+	// 连续子数组最大和
 	public static void maxSumSubArray(int p[]) {
 		if (p == null) {
 			return;
@@ -78,7 +80,7 @@ public class Array2 {
 		}
 	}
 
-	//二维连续子数组最大和
+	// 二维连续子数组最大和
 	public static void maxSumSubArray2(int p[][]) {
 		if (p == null) {
 			return;
@@ -130,7 +132,7 @@ public class Array2 {
 		System.out.println("最大和=" + max + ",起始行=" + rs + ",终止行=" + re + ",起始列=" + cs + ",终止列=" + ce);
 	}
 
-	//逆序数字对个数
+	// 逆序数字对个数
 	public static int inversePairs(int p[], int start, int end) {
 		if (p == null) {
 			return 0;

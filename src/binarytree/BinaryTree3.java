@@ -122,13 +122,17 @@ public class BinaryTree3 {
 		if (node == null || subNode == null) {
 			return false;
 		}
+		boolean result = false;
 		if (node.value == subNode.value) {
 			return isTreeEquals(node, subNode);
-		} else if (node.left != null) {
-			return isTreeEquals(node.left, subNode);
-		} else {
-			return isTreeEquals(node.right, subNode);
 		}
+		if (!result && node.left != null) {
+			result = isSubTree(node.left, subNode);
+		}
+		if (!result && node.right != null) {
+			result = isSubTree(node.right, subNode);
+		}
+		return result;
 	}
 
 	// ÅÐ¶ÏÊ÷ÊÇ·ñÏàµÈ

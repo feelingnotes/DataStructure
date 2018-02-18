@@ -1,8 +1,8 @@
 package sort;
 
 public class sort {
-	
-	//≤Â»Î≈≈–Ú
+
+	// ≤Â»Î≈≈–Ú
 	public static void insertSort(int p[]) {
 		if (p == null || p.length <= 0) {
 			return;
@@ -19,7 +19,7 @@ public class sort {
 		}
 	}
 
-	//œ£∂˚≈≈–Ú
+	// œ£∂˚≈≈–Ú
 	public static void shellSort(int p[]) {
 		if (p == null || p.length <= 0) {
 			return;
@@ -40,7 +40,7 @@ public class sort {
 		}
 	}
 
-	//—°‘Ò≈≈–Ú
+	// —°‘Ò≈≈–Ú
 	public static void selectSort(int p[]) {
 		if (p == null || p.length <= 0) {
 			return;
@@ -61,7 +61,7 @@ public class sort {
 		}
 	}
 
-	//√∞≈›≈≈–Ú
+	// √∞≈›≈≈–Ú
 	public static void bubbleSort(int p[]) {
 		if (p == null || p.length <= 0) {
 			return;
@@ -78,7 +78,7 @@ public class sort {
 		}
 	}
 
-	//º∆ ˝≈≈–Ú
+	// º∆ ˝≈≈–Ú
 	public static int[] countSort(int p[]) {
 		if (p == null || p.length <= 0) {
 			return null;
@@ -97,13 +97,13 @@ public class sort {
 		return q;
 	}
 
-	//ª˘ ˝≈≈–Ú£®ªÒ»°Œª ˝◊÷£©
+	// ª˘ ˝≈≈–Ú£®ªÒ»°Œª ˝◊÷£©
 	public static int getDigit(int x, int d) {
 		int n[] = { 1, 10, 100 };
 		return x / n[d] % 10;
 	}
 
-	//ª˘ ˝≈≈–Ú
+	// ª˘ ˝≈≈–Ú
 	public static void radixSort(int p[], int d) {
 		if (p == null || p.length <= 0) {
 			return;
@@ -138,7 +138,7 @@ public class sort {
 		}
 	}
 
-	//πÈ≤¢≈≈–Ú
+	// πÈ≤¢≈≈–Ú
 	public static void mergeSort(int p[], int start, int end) {
 		if (p == null || p.length <= 0) {
 			return;
@@ -165,7 +165,7 @@ public class sort {
 				t++;
 			}
 		}
-		
+
 		while (i <= middle) {
 			temp[t] = p[i];
 			i++;
@@ -177,13 +177,13 @@ public class sort {
 			j++;
 			t++;
 		}
-		
+
 		for (int m = start; m <= end; m++) {
 			p[m] = temp[m];
 		}
 	}
 
-	//øÏÀŸ≈≈–Ú
+	// øÏÀŸ≈≈–Ú
 	public static void quickSort(int p[], int start, int end) {
 		if (p == null || p.length <= 0) {
 			return;
@@ -216,22 +216,24 @@ public class sort {
 		}
 	}
 
-	//∂—≈≈–Ú£®µ˜’˚∂—£©
+	// ∂—≈≈–Ú£®µ˜’˚∂—£©
 	public static void adjustHeap(int p[], int i, int length) {
 		int temp = p[i];
 		for (int k = 2 * i + 1; k < length; k = 2 * k + 1) {
 			if (k + 1 < length && p[k] < p[k + 1]) {
 				k++;
 			}
-			if (p[k] > p[i]) {
+			if (p[k] > temp) {
 				p[i] = p[k];
 				i = k;
+			} else {
+				break;
 			}
 		}
 		p[i] = temp;
 	}
 
-	//∂—≈≈–Ú
+	// ∂—≈≈–Ú
 	public static void heapSort(int p[]) {
 		if (p == null || p.length <= 0) {
 			return;
